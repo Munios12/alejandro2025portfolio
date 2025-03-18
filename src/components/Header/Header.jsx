@@ -113,7 +113,7 @@ export const Header = () => {
 
         <button className={styles.btn_cv}>
           <a
-            href="public/cv/AlejandroMunozCV.pdf"
+            href="/cv/AlejandroMunozCV.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
