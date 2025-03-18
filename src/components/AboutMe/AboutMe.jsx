@@ -89,9 +89,9 @@ export const AboutMe = () => {
           </li>
         </ul>
         <div className={styles.photo__container}>
-          <video muted controls height={400}>
+          <video autoPlay muted controls height={400}>
             <source
-              src="https://www.dropbox.com/scl/fi/891l7r550llp5hquieq7e/TMProjectLite.mp4?dl=1"
+              src="https://res.cloudinary.com/dzkbwctjq/video/upload/v1742333604/TMProjectLite_femv6q.mp4"
               type="video/mp4"
             ></source>
           </video>
