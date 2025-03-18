@@ -1,5 +1,4 @@
 import styles from "./aboutme.module.css";
-import "../../../public/video/TMProjectLite.mp4";
 
 export const AboutMe = () => {
   return (
@@ -91,7 +90,10 @@ export const AboutMe = () => {
         </ul>
         <div className={styles.photo__container}>
           <video autoPlay muted controls height={400}>
-            <source src="/video/TMProjectLite.mp4" type="video/mp4"></source>
+            <source
+              src="https://www.dropbox.com/scl/fi/891l7r550llp5hquieq7e/TMProjectLite.mp4?dl=1"
+              type="video/mp4"
+            ></source>
           </video>
         </div>
       </section>
