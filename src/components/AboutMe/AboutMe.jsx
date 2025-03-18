@@ -90,7 +90,10 @@ export const AboutMe = () => {
         </ul>
         <div className={styles.photo__container}>
           <video autoPlay muted controls height={400}>
-            <source src="/video/TMProjectLite.mp4" type="video/mp4"></source>
+            <source
+              src="/public/video/TMProjectLite.mp4"
+              type="video/mp4"
+            ></source>
           </video>
         </div>
       </section>
