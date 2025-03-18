@@ -1,4 +1,5 @@
 import styles from "./aboutme.module.css";
+import "../../../public/video/TMProjectLite.mp4";
 
 export const AboutMe = () => {
   return (
