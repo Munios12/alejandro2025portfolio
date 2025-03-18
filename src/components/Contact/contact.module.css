@@ -1,0 +1,80 @@
+@import url("../../App.css");
+
+.sectionContact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0px;
+  padding: 0px 30px;
+}
+
+.sectionContact__title {
+  align-items: center;
+  color: var(--secondary-color-text);
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 1.2rem;
+  justify-content: center;
+  position: relative;
+  text-shadow: 0px 2px 7px #020d1c;
+  width: 100%;
+
+  &::before {
+    content: "03.";
+    color: var(--secondary-color);
+    font-weight: 200;
+    margin-right: 6px;
+  }
+
+  &::after {
+    align-items: center;
+    background-color: var(--section-separator);
+    content: "";
+    display: block;
+    height: 1px;
+    margin-left: 10px;
+    position: relative;
+    width: 60%;
+  }
+}
+
+.sectionContact__text {
+  margin: 30px 0px;
+  color: var(--tertiary-color-text);
+}
+
+.socialmedia__icons__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  gap: 40px;
+}
+
+.socialmedia__icon {
+  width: 10%;
+}
+
+.icon {
+  width: 3rem;
+  color: var(--secondary-color);
+}
+
+@media (min-width: 742px) {
+  .sectionContact {
+    padding: 0px 200px;
+  }
+
+  .sectionContact__title {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  .socialmedia__icon {
+    width: 2%;
+  }
+}
