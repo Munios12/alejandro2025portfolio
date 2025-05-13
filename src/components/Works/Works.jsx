@@ -101,7 +101,7 @@ export const Works = () => {
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
             />
           </div>
-          <div className={styles.tech_title}>Bases de datos:</div>
+          <div className={styles.tech_title}>Base de datos:</div>
           <div className={styles.logo_wrapper}>
             <img
               className={styles.tech_logo}
