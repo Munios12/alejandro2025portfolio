@@ -34,10 +34,9 @@ export const AboutMe = () => {
             Actualmente, estoy en búsqueda de la oportunidad para aplicar todos
             mis conocimientos y, por supuesto, seguir creciendo.
           </p>
-          <p className={styles.sectionAbout__bio}>Te presento mi stack:</p>
         </div>
 
-        <ul className={styles.technologies__list}>
+        {/* <ul className={styles.technologies__list}>
           <li className="tech-1">
             <img
               width={40}
@@ -87,7 +86,7 @@ export const AboutMe = () => {
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain-wordmark.svg"
             />
           </li>
-        </ul>
+        </ul> */}
         <div className={styles.photo__container}>
           <video autoPlay muted controls height={400}>
             <source

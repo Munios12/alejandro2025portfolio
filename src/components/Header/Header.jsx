@@ -99,7 +99,7 @@ export const Header = () => {
         }
       >
         <h1 className={styles.section__title}>Bienvenido 👋🏻 Me llamo</h1>
-        <h2 className={styles.section__myname}>Alejandro Muñoz Navarro</h2>
+        <h2 className={styles.section__myname}>Alejandro Muñoz</h2>
         <h3 className={styles.section__profesion}>
           Frontend developer en Barcelona 🧑🏻‍💻
         </h3>

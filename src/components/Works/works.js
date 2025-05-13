@@ -7,15 +7,17 @@ export const worksList = [
       "Herramienta que ayuda a buscar zapatillas desparejadas. Almacénalas en la base de datos, para luego encontrar sus parejas.",
     linkGithub: "https://github.com/Munios12/The-Missmates-Project",
     linkWebSite: "https://the-missmates-project.vercel.app/",
+    tech: ["react", "redux", "javascript", "supabase"],
   },
   {
     id: 2,
     img: "/works_img/nike4atheletes.png",
     titulo: "NIKE 4 ATHLETES",
     description:
-      "Mapa interactivo de la tienda. Las nuevas incorporaciones tienen acceso a distinta información de la tienda.",
+      "Mapa interactivo del lugar dónde trabajo. Las nuevas incorporaciones tienen acceso a distinta información de la tienda.",
     linkGithub: "https://github.com/Munios12/nike_for_athletes",
     linkWebSite: "https://nike-for-athletes.vercel.app/",
+    tech: ["react", "redux", "typescript"],
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const worksList = [
       "Registrate, inicia sesión y explora una amplia lista de videojuegos (RAWG API). Añádelos a tu lista de favoritos y comenta.",
     linkGithub: "https://github.com/Munios12/gamingshare",
     linkWebSite: "https://gamingshare.vercel.app/",
+    tech: ["react", "redux", "firebase", "sass", "node", "typescript", "jest"],
   },
   {
     id: 4,
@@ -34,5 +37,6 @@ export const worksList = [
       "No, no es broma. Te presento lo que una vez fue mi portfolio. ! Cuánto ha cambiado todo !",
     linkGithub: "https://github.com/Munios12/202204-W01-Alejandro-Munoz",
     linkWebSite: "https://almunoz.netlify.app/",
+    tech: ["html5", "css", "javascript"],
   },
 ];

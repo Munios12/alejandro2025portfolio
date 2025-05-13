@@ -1,11 +1,130 @@
 import styles from "./works.module.css";
 import { worksList } from "./works";
+import { useEffect } from "react";
 
 export const Works = () => {
+  useEffect(() => {
+    const projects = document.querySelectorAll(`.${styles.work1}`);
+    const logoWrappers = document.querySelectorAll(`.${styles.logo_wrapper}`);
+
+    projects.forEach((project, index) => {
+      const techList = worksList[index]?.tech || [];
+
+      project.addEventListener("mouseenter", () => {
+        logoWrappers.forEach((wrapper) => {
+          const logoImg = wrapper.querySelector("img");
+          const techName = logoImg.getAttribute("data-tech");
+
+          if (techList.includes(techName)) {
+            wrapper.classList.add(styles["logo_wrapper--active"]);
+            wrapper.classList.remove(styles["logo_wrapper--inactive"]);
+          } else {
+            wrapper.classList.remove(styles["logo_wrapper--active"]);
+            wrapper.classList.add(styles["logo_wrapper--inactive"]);
+          }
+        });
+      });
+
+      project.addEventListener("mouseleave", () => {
+        logoWrappers.forEach((logo) => {
+          logo.classList.remove(styles["logo_wrapper--active"]);
+          logo.classList.remove(styles["logo_wrapper--inactive"]);
+        });
+      });
+    });
+  }, []);
+
   return (
     <>
       <section className={styles.sectionWorks} id="works">
         <h1 className={styles.sectionWorks__title}>Trabajos</h1>
+
+        {/* Contenedor logos */}
+
+        <div className={styles.contenedor_logos}>
+          <div className={styles.tech_title}>Lenguajes básicos:</div>
+          <div className={styles.logo_wrapper}>
+            <img
+              className={styles.tech_logo}
+              data-tech="html5"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg"
+            />
+          </div>
+          <div className={styles.logo_wrapper}>
+            <img
+              className={styles.tech_logo}
+              data-tech="css3"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg"
+            />
+          </div>
+          <div className={styles.logo_wrapper}>
+            <img
+              className={styles.tech_logo}
+              data-tech="javascript"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+            />
+          </div>
+          <div className={styles.tech_title}>Frontend:</div>
+          <div className={styles.logo_wrapper}>
+            <img
+              className={styles.tech_logo}
+              data-tech="react"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+            />
+          </div>
+          <div className={styles.logo_wrapper}>
+            <img
+              className={styles.tech_logo}
+              data-tech="typescript"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg"
+            />
+          </div>
+          <div className={styles.logo_wrapper}>
+            <img
+              className={styles.tech_logo}
+              data-tech="redux"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg"
+            />
+          </div>
+          <div className={styles.logo_wrapper}>
+            <img
+              className={styles.tech_logo}
+              data-tech="sass"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg"
+            />
+          </div>
+          <div className={styles.tech_title}>Backend:</div>
+          <div className={styles.logo_wrapper}>
+            <img
+              className={styles.tech_logo}
+              data-tech="node"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+            />
+          </div>
+          <div className={styles.tech_title}>Bases de datos:</div>
+          <div className={styles.logo_wrapper}>
+            <img
+              className={styles.tech_logo}
+              data-tech="firebase"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg"
+            />
+          </div>
+          <div className={styles.logo_wrapper}>
+            <img
+              className={styles.tech_logo}
+              data-tech="supabase"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
+            />
+          </div>
+          <div className={styles.tech_title}>Testing:</div>
+          <div className={styles.logo_wrapper}>
+            <img
+              className={styles.tech_logo}
+              data-tech="jest"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg"
+            />
+          </div>
+        </div>
 
         <ul className={styles.works__projectList}>
           {worksList.map((e) => {
